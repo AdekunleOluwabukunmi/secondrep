@@ -1,0 +1,275 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body, html{
+    height: 100;
+    margin: 0;
+    padding: 0;
+    font-size:1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+
+/* NAVIGATION BAR */
+.navbar {
+  background-color: #80ed99;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+  height: 65px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.home-link {
+  border-bottom: 3px solid white;
+}
+/* Header */
+section{
+    text-align:center;
+   padding: 50px 80px;
+   font-size: 0.7em;
+
+}.style{
+  font-size: 1.5rem;
+  background-color: #80ed99;
+  color: #fff;
+  padding-top:10px;
+  padding-bottom: 0;
+  margin: 0;
+  border: 0;
+
+}
+/* Background image */
+.back{
+    background-image: url("IMG_0022.JPG");
+    min-height: 90vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.back{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.back .button{
+  font-size: 18px;
+  text-decoration: none;
+  color: #ece8e8;
+  border: #ece8e8 2px solid;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-left:40px;
+}
+.button:hover{
+  background: #474747;
+  color: #ece8e8;
+}
+
+/* SONG QUOTE */
+
+.text1 h1, h6{
+    line-height: 1em;
+    font-style: italic;
+    margin-left:40px;
+    color: #ece8e8;
+
+}
+.text1 h6 .bord{
+  margin-bottom: 10px;
+  border-top:#ece8e8 2px solid;
+}
+.text h4{
+    margin-top: 5px;
+}
+
+/* SLIDER */
+
+#slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+#slider ul {
+  position: relative;
+  list-style: none;
+  height: 100%;
+  width: 10000%;
+  padding: 0;
+  margin: 0;
+  transition: all 750ms ease;
+  left: 0;
+}
+#slider ul li {
+  position: relative;
+  height: 100%;
+  float: left;
+}
+#slider ul li img{
+  width: 100%;
+  height: 400px;
+}
+   
+#slider #prev, #slider #next {
+  width: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 2rem;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 150ms ease;
+}
+#slider #prev:hover, #slider #next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 0;
+}
+#slider #prev {
+  left: 10px;
+}
+#slider #next {
+  right: 10px;
+}
+/* song area */
+
+p.listen {
+  margin-bottom: 0.5rem;
+}
+.split{
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+.split div{
+  padding: 40px;
+}
+.songarea ol{
+  font-size: 0.8rem;
+  padding: 0;
+  margin: 0;
+}
+.songarea ol li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8em;
+  color: black;
+
+}
+.songarea li a:hover {
+  color: #000;
+}
+li time {
+  text-align: right;
+
+}
+.songarea ol {
+  margin: 0;
+  padding: 0;
+}
+
+footer.main{
+  background-color: #80ed99;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  font-size: 0.5rem;
+}
+@media (max-width: 376px){
+  body{
+    cursor: pointer;
+  }
+  .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.6rem;
+  }
+  .split{
+    display: block;
+
+  }
+
+  .navbar {
+    background-color: #80ed99;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    height: 45px;
+
+  }
+  .style{
+    font-size: 0.8em;
+  }
+
+  .text{
+    font-size:1.0rem;
+    line-height: 1rem;
+  }
+  }
+@media (max-width: 967px){
+  .split{
+    display: block;
+    line-height: 1em;
+  }
+  .split div{
+    padding: 20px;
+    margin-top:1em;
+  }
+  .back{
+    min-height: 75vh;
+  }
+
+  iframe{
+    margin-top: 30px;
+
+  }
+  .navbar{
+    padding-bottom:1rem;
+  }
+}
+@media (max-width: 442px){
+  .songarea{
+    align-items: start;
+    font-size: 0.5em;
+  }
+  .back h1{
+    font-size: 1.5rem;
+  }
+  .text1 h1, h6{
+
+    margin-left:20px;
+
+}
+}
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="newproject.css">
+    <title>ABBEY CRUISE</title>
+</head>
+<body>
+    <heeader >
+        <div class="style">
+          <center>ABBEY CRUISE</center>
+        </div>
+    </heeader>
+    <nav class="navbar">
+        <ul>
+            <li><span class="home-link"><a href="#">HOME</span></a></li>
+            <li><a href="newprojectcontact.html">CONTACT</a></li>
+            <li><a href="newproject1.html">PROMOTION</a></li>
+        </ul>
+    </nav>
+    <div class="back">
+        <div class="text1">
+            <h6><span class="bord">OUT DEC 11, 2023</span></h6>
+            <h1>NEW SONG COMING</h1>
+        </div>
+        <div class="link">
+            <a href="https://audiomack.com/abbeycruize" target="_blank" class="button">LISTEN NOW</a>
+        </div>
+    </div>
+    <section class="text">
+        <em>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus at quasi minus ad voluptatum facere exercitationem! Soluta voluptatibus laboriosam reprehenderit? Quod beatae accusamus voluptatem ipsa ullam ratione, quae temporibus porro.
+        </em>
+        <h4>"John Smith"</h4>
+    </section>
+    <div id="slider">
+            <!-- Area for slide -->
+        <ul id="slideWrap"> 
+          <li><img src="https://1.bp.blogspot.com/-GgceYGYr2pk/YPCQp8loxqI/AAAAAAAACXU/Y795AFD-cN8PMV0V2__z2n1B3KFagE8qgCNcBGAsYHQ/s16000/1.jpg" alt=""></li>
+          <li><img src="https://1.bp.blogspot.com/-pl0VR_xS5Cw/YPCQp1scezI/AAAAAAAACXc/oB9xc6k8RuY5rPksMSy01f3iUn8zSIFzwCNcBGAsYHQ/s16000/2.jpg" alt=""></li>
+          <li><img src="https://1.bp.blogspot.com/-dt6CL2fiBq0/YPCQp0zmK6I/AAAAAAAACXY/0PevDL7pvx87mefb4oCnO613N1UitdicQCNcBGAsYHQ/s16000/3.jpg" alt=""></li>
+          <li><img src="https://1.bp.blogspot.com/-T_V-s57aVDo/YPCQrWayswI/AAAAAAAACXg/h1ifJGnBuXovvBdGDNvmhg-DXIVK4Xw9QCNcBGAsYHQ/s16000/4.jpg" alt=""></li>
+          <li><img src="https://1.bp.blogspot.com/-TNT1a5M1v3o/YPCQrWmn_fI/AAAAAAAACXk/p8nx_OB2R6Aw172WIv5vuB8jF-qWDsHlwCNcBGAsYHQ/s16000/5.jpg" alt=""></li>
+        </ul>
+        <a id="prev" href="#">&#60;</a>
+        <a id="next" href="#">&#62;</a>
+      </div>    
+    <section class="split">
+      <div class="insection">
+        <p class="listen" style="border-bottom: 3px solid black;">Listen Now</p>
+          <iframe src="https://audiomack.com/embed/abbeycruize/song/big-brother" scrolling="no" width="100%" height="300" scrollbars="no" frameborder="0"></iframe>
+        
+      </div>
+      <div class="songarea">
+        <ol>
+          <li><a href="https://audiomack.com/embed/abbeycruize/song/big-brother" target="_blank" rel="noopener noreferrer">BIG BROTHER / ABBEYCRUISE <time datetime="02:53">02:53</time></a></li>
+
+          <li><a href="https://audiomack.com/embed/abbeycruize/song/melody" target="_blank" rel="noopener noreferrer">SOMETHING / ABBEYCRUISE <time datetime="03:18">03:18</time></a></li>
+        </ol>
+      </div>
+    </section>
+        <script>
+            var responsiveSlider = function() {
+        
+        var slider = document.getElementById("slider");
+        var sliderWidth = slider.offsetWidth;
+        var slideList = document.getElementById("slideWrap");
+        var count = 1;
+        var items = slideList.querySelectorAll("li").length;
+        var prev = document.getElementById("prev");
+        var next = document.getElementById("next");
+        
+        window.addEventListener('resize', function() {
+          sliderWidth = slider.offsetWidth;
+        });
+        
+        var prevSlide = function() {
+          if(count > 1) {
+            count = count - 2;
+            slideList.style.left = "-" + count * sliderWidth + "px";
+            count++;
+          }
+          else if(count = 1) {
+            count = items - 1;
+            slideList.style.left = "-" + count * sliderWidth + "px";
+            count++;
+          }
+        };
+        
+        var nextSlide = function() {
+          if(count < items) {
+            slideList.style.left = "-" + count * sliderWidth + "px";
+            count++;
+          }
+          else if(count = items) {
+            slideList.style.left = "0px";
+            count = 1;
+          }
+        };
+        
+        next.addEventListener("click", function() {
+          nextSlide();
+        });
+        
+        prev.addEventListener("click", function() {
+          prevSlide();
+        });
+        
+        setInterval(function() {
+          nextSlide()
+        }, 5000);
+        
+        };
+        
+        window.onload = function() {
+        responsiveSlider();  
+        }
+        
+        
+          </script>
+    <footer class="main">
+        <p>&copy; 2023 - All rights reserved</p>
+    </footer>
+</body>
+</html>
